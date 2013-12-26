@@ -1,0 +1,10 @@
+# Build results
+[Dd]ebug/
+[Bb]in/
+[Oo]bj/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+
