@@ -7,6 +7,8 @@ int a[MAXN][MAXN];
 int main()
 {
     //3.3ÉßĞÎÌîÊı
+
+    /*
     int n,x,y,tot=0;
     scanf("%d",&n);
     memset(a,0,sizeof(a));
@@ -27,6 +29,6 @@ int main()
         }
         printf("\n");
     }
-
+    */
     return 0;
 }
