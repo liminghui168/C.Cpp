@@ -1,34 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #define MAXN 10
+
 int a[MAXN][MAXN];
 
 int main()
 {
-    //3.3ÉßÐÎÌîÊý
+    //è›‡å½¢å¡«æ•°
+	int i,j,k,tot=0;
+	scanf("%d",&k);
+	memset(a,0,sizeof(a));
+	tot = a[i=0][j=k-1] = 1;
+	while(tot < k*k)
+	{
+		while(i+1<k && !a[i+1][j]) a[++i][j]=++tot;
+		while(j-1>=0 && !a[i][j-1]) a[i][--j]=++tot;
+		while(i-1>=0 && !a[i-1][j]) a[--i][j]=++tot;
+		while(j+1<k && !a[i][j+1]) a[i][++j]=++tot;
+	}
 
-    /*
-    int n,x,y,tot=0;
-    scanf("%d",&n);
-    memset(a,0,sizeof(a));
-    tot = a[x=0][y=n-1] = 1;
-    while(tot < n*n)
-    {
-        while(x+1<n && !a[x+1][y]) a[++x][y]=++tot;
-        while(y-1>=0 && !a[x][y-1]) a[x][--y]=++tot;
-        while(x-1>=0 && !a[x-1][y]) a[--x][y]=++tot;
-        while(y+1<n && !a[x][y+1]) a[x][++y]=++tot;
-    }
+	for(i=0;i<k;i++)
+	{
+		for(j=0;j<k;j++)
+		{
+			printf("%3d", a[i][j]);
+		}
+		printf("\n");
+	}
 
-    for(x=0;x<n;x++)
-    {
-        for(y=0;y<n;y++)
-        {
-            printf("%3d",a[x][y]);
-        }
-        printf("\n");
-    }
-    */
-    return 0;
+	return 0;
 }

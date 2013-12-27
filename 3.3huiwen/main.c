@@ -13,8 +13,8 @@ int main()
     n=strlen(buf);
 
     for(i=0;i<n;i++)
-        if(isalpha(buf[i])) //�ж��Ƿ�ΪСд��ĸ
-            s[m++] = toupper(buf[i]);
+        if(isalpha(buf[i])) //判断是否为小写字母
+            s[m++] = toupper(buf[i]); //转化为大写
 
     for(i=0;i<m;i++)
     {
